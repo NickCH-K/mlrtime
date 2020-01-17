@@ -10,7 +10,7 @@
 {title:MLRtimesetup}
 
 {phang}
-{bf:MLRtimesetup} {hline 2} set up rcall and R package dependencies
+{bf:MLRtimesetupz} {hline 2} set up rcall and R package dependencies
 
 
 {marker syntax}{...}
@@ -54,6 +54,10 @@ If {cmd:rcall} seems to be working fine, but R package installation is giving yo
 
 {pstd} install.packages("grf", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
  
+{pstd} install.packages("survival", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
+
+{pstd} install.packages("ranger", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE) 
+ 
 {marker author}{...}
 {title:Author}
 
@@ -63,6 +67,6 @@ nhuntington-klein@fullerton.edu
 {marker references}{...}
 {title:References}
 
-{phang} Haghish, E. F. (2019). Seamless interactive language interfacing between R and Stata. The Stata Journal, 19(1), 61–82. {browse "https://doi.org/10.1177/1536867X19830891"}.
+{phang} Haghish, E. F. (2019). Seamless interactive language interfacing between R and Stata. The Stata Journal, 19(1), 61–82. {browse "https://doi.org/10.1177/1536867X19830891":Link}.
 
 

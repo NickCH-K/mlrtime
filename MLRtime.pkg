@@ -10,3 +10,7 @@ F causal_forest.ado
 F causal_forest.sthlp
 F MLRtimesetup.ado
 F MLRtimesetup.sthlp
+F ranger.ado
+F ranger.sthlp
+F MLRtime.ado
+F MLRtime.sthlp

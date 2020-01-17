@@ -55,7 +55,7 @@ prog def MLRtimesetup
 		display as text "If errors occur, please see {browse " `"`url3'"' ":the rcall website} for"
 		display "troubleshooting - rcall may not be able to find your R installation."
 		
-		foreach pkg in "DiceKriging" "lmtest" "Matrix" "methods" "Rcpp" "sandwich" "grf" {
+		foreach pkg in "DiceKriging" "lmtest" "Matrix" "methods" "Rcpp" "sandwich" "grf" "survival" "ranger" {
 			rcall: if(!("`pkg'" %in% rownames(installed.packages()))) {install.packages('`pkg'', repos = '`repo'', dependencies = TRUE)} else { update.packages('`pkg'', repos = 'https://cran.cnr.berkeley.edu/', dependencies = TRUE)}
 		}
 	}
