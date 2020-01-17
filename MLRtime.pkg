@@ -1,0 +1,12 @@
+v 0.1
+d 'MLRtime': Machine Learning in R... in Stata
+d 
+d Access ML commands in R using Stata
+d 
+d Distribution-Date:   20200117
+d License: MIT
+d 
+F causal_forest.ado
+F causal_forest.sthlp
+F MLRtimesetup.ado
+F MLRtimesetup.sthlp
