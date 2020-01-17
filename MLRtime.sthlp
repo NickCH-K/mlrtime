@@ -10,7 +10,7 @@
 {title:MLRtimesetup}
 
 {phang}
-{bf:MLRtime} {hline 2} welcome to MLRtime
+{bf:MLRtime} {hline 2} It's MLRtime
 
 
 {marker syntax}{...}
