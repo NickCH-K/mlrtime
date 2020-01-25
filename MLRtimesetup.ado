@@ -47,7 +47,7 @@ prog def MLRtimesetup
 	}
 	
 	if inlist("`st'","y","yes") {
-		net install github, from("https://haghish.github.io/github/")
+		net install github, from("https://haghish.github.io/github/") replace
 		github install haghish/rcall, stable
 		
 		display as error "rcall has been installed. rcall will now be used to install R packages."
