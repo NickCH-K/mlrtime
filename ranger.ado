@@ -45,15 +45,22 @@ prog def ranger, rclass
 			replace `touse' = 0 if missing(`var')
 		} 
 	
-		preserve
+		* Store original order and data so the new variable can be merged in
+		tempvar orig
+		g `orig' = _n
+		* This variable is taking a trip into R and so can't start with a _
+		rename `orig' X`orig'
+		
+		tempfile origdata
+		save `origdata', replace
 		
 		keep if `touse'
 		
 		* Get rid of value labels, they pass to R as strings
 		label drop _all 
 		
-		keep `dv2' `indvars2' `varsend'
-		order `dv2' `indvars2' `varsend'
+		keep X`orig' `dv2' `indvars2' `varsend'
+		order X`orig' `dv2' `indvars2' `varsend'
 		
 		* R variable names can't start with _
 		* but fvrevar gives us a lot of those!
@@ -79,7 +86,7 @@ prog def ranger, rclass
 		* Build the R command in locals to avoid calling rcall too many times, each time brings up a console
 		
 		* Standard stuff
-		local start = "library(ranger); df <- st.data(); rangerdata <- df[,1:(1+`numinds')]"
+		local start = "library(ranger); df <- st.data(); orig <- df[,1]; rangerdata <- df[,2:(2+`numinds')]"
 		
 		* List of other variables to send:
 		local vs = ""
@@ -96,8 +103,9 @@ prog def ranger, rclass
 		local comm = "; RF <- ranger(`dv'~.,data=rangerdata`opts')"
 		
 		* Do we want predictions?
+		local dfreturn = ""
 		if "`pred'" != "" {
-			local prcode = "; pr_000001 <- as.matrix(predict(RF`predopts')\"+ustrunescape("\u0024")+"predictions)"
+			local dfreturn = "`pred' = predict(RF`predopts')@@predictions"
 	
 			cap confirm var `pred'
 			if _rc == 0 & "`replace'" == "" {
@@ -105,18 +113,18 @@ prog def ranger, rclass
 				exit 110
 			}
 		}
-		
+
 		* List of functions to run / objects to return
 		local objreturn = ""
+		local returnclass = ""
 		if "`return'" != "" {		
 			local eatreturn = subinstr("`return' ;","<-","=",.)
 			local return = "; `return'"
-			local returnclass = ""
 			local first = 1
 			while strpos("`eatreturn'",";") > 0 | `first' == 1 {
 				local name = trim(substr("`eatreturn'",1,strpos("`eatreturn'","=") - 1))
 				local objreturn = trim("`objreturn' `name'")
-				local returnclass = "; class_`name' <- class(`name')"
+				local returnclass = "`returnclass'; class_`name' <- class(`name')"
 				local eatreturn = substr("`eatreturn'",strpos("`eatreturn'",";")+1,.)
 				
 				local first = 0
@@ -125,7 +133,6 @@ prog def ranger, rclass
 		}
 		
 		local varnameret = ""
-		local matrixify = ""
 		if "`varreturn'" != "" {
 			local eatvarn = subinstr("`varreturn' ;","<-","=",.)
 			local varreturn = "; `varreturn'"
@@ -136,7 +143,7 @@ prog def ranger, rclass
 				local varnameret = trim("`varnameret' `name'")
 				local eatvarn = substr("`eatvarn'",strpos("`eatvarn'",";")+1,.)
 				
-				local matrixify = "`matrixify'; `name' <- as.matrix(`name')"
+				local dfreturn = "`dfreturn', `name' = `name'"
 						
 				cap confirm var `name'
 				if _rc == 0 & "`replace'" == "" {
@@ -148,11 +155,19 @@ prog def ranger, rclass
 			}
 		}
 		
+		* If we're sending variables back
+		local mergeflag = 0
+		if length("`dfreturn'") > 0 {
+			local dfreturn = "; df2 <- data.frame(X`orig' = orig,`dfreturn'); st.load(df2)"
+			local mergeflag = 1
+		}	
+		
 		local clean = "; rm(df); rm(rangerdata)"
 		
 		* Make R code usable
 		local return = subinstr("`return'","@@","\"+ustrunescape("\u0024"),.)
 		local varreturn = subinstr("`varreturn'","@@","\"+ustrunescape("\u0024"),.)
+		local dfreturn = subinstr("`dfreturn'","@@","\"+ustrunescape("\u0024"),.)
 		if "`precedes'" != "" {
 			local precedes = "; `precedes'"
 			local precedes = subinstr("`precedes'","@@","\"+ustrunescape("\u0024"),.)
@@ -163,7 +178,7 @@ prog def ranger, rclass
 		}
 	
 		* Send data over, run causal forest, do whatever else necessary, and bring it back
-		noisily rcall: `start'`vs'`seedn'`precedes'`comm'`follows'`prcode'`clean'`return'`returnclass'`varreturn'`matrixify'	
+		noisily rcall: `start'`vs'`seedn'`precedes'`comm'`follows'`prcode'`return'`returnclass'`varreturn'`dfreturn'`clean'
 				
 		* For objects being returned in r(), do that
 		if "`objreturn'" != "" {
@@ -172,71 +187,21 @@ prog def ranger, rclass
 					matrix `x' = r(`x')
 				}
 				else {
-					return local `x' = `r(`x')'
+					return local `x' `r(`x')'
 				}
 			}
 		}	
 		
-		* and pred
-		if "`pred'" != "" {		
-			matrix `pred' = r(pr_000001)
+		* If we had any variables coming back, that means we've cleared the data and 
+		* are now working only with those variables
+		if `mergeflag' == 1 {
+			merge 1:1 X`orig' using `origdata', nogen
+			order `pred' `varnameret', last
+			sort X`orig'
 		}
 		
-		* and other vars
-		if "`varnameret'" != "" {
-			foreach x in `varnameret' {
-				matrix `x' = r(`x')
-			}
-		}
-		
-		restore
-		
-		* Organize data so that returning variables can be saved, even if not all obs were sent
-		tempvar origorder
-		g `origorder' = _n
-		gsort -`touse' `origorder'
-		
-		
-		count if `touse'
-		local numshould = r(N)
-		
-		* Returning predictions
-		if "`pred'" != "" {
-			if "`replace'" == "replace" {
-				cap drop `pred'
-				cap drop `pred'1
-			}
-		
-			svmat `pred'
-			rename `pred'1 `pred'
-			
-			count if !missing(`pred')
-			if r(N) != `numshould' {
-				display as error "Warning: length of `pred' variable does not match number of observations in analysis. These may be true missings, or there may be an error."
-				display as text ""
-			}
-		}
-		
-		* Returning other variables
-		if "`varnameret'" != "" {
-			foreach x in `varnameret' {
-				if "`replace'" == "replace" {
-					cap drop `x'
-					cap drop `x'1
-				}
-			
-				svmat `x'
-				rename `x'1 `x'
-				
-				count if !missing(`x')
-				if r(N) != `numshould' {
-					display as error "Warning: length of `x' variable does not match number of observations in analysis. These may be true missings, or there may be an error."
-					display as text ""
-				}
-			}
-		}
-		
-		sort `origorder'
+		* We changed the name, so tempvar won't drop it any more
+		drop X`orig'
 		
 	}	
 	
