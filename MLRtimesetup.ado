@@ -40,7 +40,7 @@ prog def MLRtimesetup
 	}
 
 	if "`anything'" == "" {
-		local repo = "https://cran.cnr.berkeley.edu/"
+		local repo = "https://cloud.r-project.org"
 	}
 	else {
 		local repo = "`anything'"
@@ -56,7 +56,7 @@ prog def MLRtimesetup
 		display "troubleshooting - rcall may not be able to find your R installation."
 		
 		foreach pkg in "DiceKriging" "lmtest" "Matrix" "methods" "Rcpp" "sandwich" "grf" "survival" "ranger" {
-			rcall: if(!("`pkg'" %in% rownames(installed.packages()))) {install.packages('`pkg'', repos = '`repo'', dependencies = TRUE)} else { update.packages('`pkg'', repos = 'https://cran.cnr.berkeley.edu/', dependencies = TRUE)}
+			rcall: if(!("`pkg'" %in% rownames(installed.packages()))) {install.packages('`pkg'', repos = '`repo'', dependencies = TRUE)} else { update.packages('`pkg'', repos = '`repo'', dependencies = TRUE)}
 		}
 	}
 	else {
