@@ -1,8 +1,11 @@
 {smcl}
-{* *! version 1.2.2  15may2018}{...}
+{* *! version 2.0.0 24sep2021}{...}
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
+{vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
+{vieweralsosee "[R] grf" "help grf"}{...}
+{vieweralsosee "[R] gsynth" "help gsynth"}{...}
 {viewerjumpto "Syntax" "examplehelpfile##syntax"}{...}
 {viewerjumpto "Description" "examplehelpfile##description"}{...}
 {viewerjumpto "Author" "examplehelpfile##author"}{...}
@@ -29,13 +32,13 @@
 {cmd:MLRtime} the {it: command} is really just here so something will pop up when you type {cmd: help MLRtime} after installing it.
 
 {pstd}
-The actual commands of interest are: {help MLRtimesetup} which will set up your machine properly, {help causal_forest} for running causal forests, and {help ranger} for running random forests.
+The actual commands of interest are: {help MLRtimesetup} which will set up your machine properly, {help grf} for running honest random forests, including causal forests, {help gsynth} for the generalized synthetic control method, including matrix completion, and {help ranger} for running random forests.
 
 {marker author}{...}
 {title:Author}
 
 Nick Huntington-Klein
-nhuntington-klein@fullerton.edu
+nhuntington-klein@seattleu.edu
 
 {marker references}{...}
 {title:References}

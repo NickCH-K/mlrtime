@@ -1,3 +1,4 @@
+*! MLRtimesetup v.2.0.0 Set up MLRtime and all its dependencies. 23sep2021 by Nick CH-K
 cap prog drop MLRtimesetup
 prog def MLRtimesetup
 
@@ -55,7 +56,7 @@ prog def MLRtimesetup
 		display as text "If errors occur, please see {browse " `"`url3'"' ":the rcall website} for"
 		display "troubleshooting - rcall may not be able to find your R installation."
 		
-		foreach pkg in "DiceKriging" "lmtest" "Matrix" "methods" "Rcpp" "sandwich" "grf" "survival" "ranger" {
+		foreach pkg in "DiceKriging" "lmtest" "Matrix" "methods" "Rcpp" "RcppArmadillo" "sandwich" "grf" "survival" "gsynth" "grDevices" {
 			rcall: if(!("`pkg'" %in% rownames(installed.packages()))) {install.packages('`pkg'', repos = '`repo'', dependencies = TRUE)} else { update.packages('`pkg'', repos = '`repo'', dependencies = TRUE)}
 		}
 	}
@@ -77,7 +78,7 @@ prog def MLRtimesetup
 		}
 	
 		* Use install.packages because install_github can get strange with dependencies
-		foreach pkg in "DiceKriging" "lmtest" "Matrix" "methods" "Rcpp" "sandwich" "grf" {
+		foreach pkg in "DiceKriging" "lmtest" "Matrix" "methods" "Rcpp" "RcppArmadillo" "sandwich" "grf" "gsynth" "grDevices" {
 			rcall: if(!("`pkg'" %in% rownames(installed.packages()))) {install.packages('`pkg'', repos = '`repo'', dependencies = TRUE)}
 		}
 	}

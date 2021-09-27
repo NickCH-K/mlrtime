@@ -1,8 +1,11 @@
 {smcl}
-{* *! version 1.2.2  15may2018}{...}
+{* *! version 2.0.0  24sep2021}{...}
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
+{vieweralsosee "[R] MLRtime" "help MLRtime"}{...}
+{vieweralsosee "[R] grf" "help grf"}{...}
+{vieweralsosee "[R] gsynth" "help gsynth"}{...}
 {viewerjumpto "Syntax" "examplehelpfile##syntax"}{...}
 {viewerjumpto "Description" "examplehelpfile##description"}{...}
 {viewerjumpto "Author" "examplehelpfile##author"}{...}
@@ -50,19 +53,24 @@ If {cmd:rcall} seems to be working fine, but R package installation is giving yo
 
 {pstd} install.packages("Rcpp", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
 
+{pstd} install.packages("RcppArmadillo", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
+
 {pstd} install.packages("sandwich", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
+
+{pstd} install.packages("grDevices", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
 
 {pstd} install.packages("grf", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
  
 {pstd} install.packages("survival", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
 
-{pstd} install.packages("ranger", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE) 
+{pstd} install.packages("gsynth", repos = "https://cran.cnr.berkeley.edu/", dependencies = TRUE)
+
  
 {marker author}{...}
 {title:Author}
 
 Nick Huntington-Klein
-nhuntington-klein@fullerton.edu
+nhuntington-klein@seattleu.edu
 
 {marker references}{...}
 {title:References}
