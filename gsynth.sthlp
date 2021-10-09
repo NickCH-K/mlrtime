@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 2.0.0  20sep2020}{...}
+{* *! version 2.1.0  09oct2020}{...}
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
@@ -7,12 +7,13 @@
 {vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
 {vieweralsosee "[R] gsynth_plot" "help gsynth_plot"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
+{vieweralsosee "[R] parsnip" "help parsnip"}{...}
 {viewerjumpto "Syntax" "examplehelpfile##syntax"}{...}
 {viewerjumpto "Description" "examplehelpfile##description"}{...}
 {viewerjumpto "Author" "examplehelpfile##author"}{...}
 {viewerjumpto "References" "examplehelpfile##references"}{...}
 {viewerjumpto "Examples" "examplehelpfile##examples"}{...}
-{title:Generalized Random Forest Functions}
+{title:Generalized Synthetic Control Function}
 
 {phang}
 {bf:gsynth} {hline 2} Implements the generalized synthetic control method based using R's gsynth
@@ -69,6 +70,9 @@
 
 {pstd}
 {cmd:gsynth} is an interface between Stata and the generalized synthetic control {cmd: gsynth} function in the R package {cmd: gsynth}, by Xu (2017).  This also provides access to the matrix completion method of Athey, Bayati, and Doudchenko (2017).
+
+{pstd}
+Note that there is also a recent Stata-native implementation {browse "https://yiqingxu.org/packages/fect/stata/fect_md.html": here}. If you are having difficulty with this function you may want to try it.
 
 {pstd}
 It will send data to an R session, run the {cmd: gsynth} command there, and then return the relevant results. Results will be printed and are also available in the {cmd: e()} matrices {cmd: e(att_avg)} (average treatment-on-treated), {cmd: e(att)} (by-period treatment-on-treated), and {cmd: e(coef)} (coefficients on time-varying covariates). It can then be followed by {cmd: gsynth_plot} to plot the treatment effect over time. 

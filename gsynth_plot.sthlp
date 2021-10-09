@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 2.0.0  25sep2020}{...}
+{* *! version 2.1.0  09oct2020}{...}
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
@@ -7,12 +7,13 @@
 {vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
 {vieweralsosee "[R] gsynth" "help gsynth"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
+{vieweralsosee "[R] parsnip" "help parsnip"}{...}
 {viewerjumpto "Syntax" "examplehelpfile##syntax"}{...}
 {viewerjumpto "Description" "examplehelpfile##description"}{...}
 {viewerjumpto "Author" "examplehelpfile##author"}{...}
 {viewerjumpto "References" "examplehelpfile##references"}{...}
 {viewerjumpto "Examples" "examplehelpfile##examples"}{...}
-{title:Generalized Random Forest Functions}
+{title:Generalized Synthetic Control Plots}
 
 {phang}
 {bf:gsynth} {hline 2} Visualizes estimation results of the generalized synthetic control method from R's gsynth

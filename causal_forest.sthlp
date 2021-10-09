@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 2.0.0  25sep2021}{...}
+{* *! version 2.1.0  09oct2021}{...}
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
@@ -7,6 +7,7 @@
 {vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
 {vieweralsosee "[R] gsynth" "help gsynth"}{...}
+{vieweralsosee "[R] parsnip" "help parsnip"}{...}
 {viewerjumpto "Description" "examplehelpfile##description"}{...}
 {title:groupsearch}
 

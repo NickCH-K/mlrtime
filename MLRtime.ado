@@ -1,12 +1,16 @@
-*! MLRtime v.2.0.0 Get introduced to the MLRtime package. 23sep2021 by Nick CH-K
+*! MLRtime v.2.1.0 Get introduced to the MLRtime package. 09oct2021 by Nick CH-K
 cap prog drop MLRtime
 prog def MLRtime
 
 	display "It's MLRtime!"
-	display "Please install R from R-Project.org and run {help MLRtimesetup} before using the rest of the functions in the package."
+	display "Please install R from R-Project.org and then run {help MLRtimesetup} before using the rest of the functions in the package."
 	display ""
 	display "Functions available include:"
 	display "{help grf} to estimate generalized random forests, including causal forests, with R's grf package."
 	display "{help gsynth} to estimate the generalized synthetic control method, including matrix completion, with R's gsynth package."
+	display "{help parsnip} to fit a wide array of machine-learning algorithms through R's parsnip package."
+	display ""
+	display "Note: If you see a warning when R is running that a package was built on a different version of R,"
+	display "that's okay. It's probably not an issue, and you can make it go away by updating your R installation."
 	
 end

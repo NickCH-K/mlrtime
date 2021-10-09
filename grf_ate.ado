@@ -1,4 +1,4 @@
-*! grf_ate v.2.0.0 Estimate an average treatment effect in R's grf package. 22sep2021 by Nick CH-K
+*! grf_ate v.2.1.0 Estimate an average treatment effect in R's grf package. 09oct2021 by Nick CH-K
 cap prog drop grf_ate
 prog def grf_ate, rclass
 	

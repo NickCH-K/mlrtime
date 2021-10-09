@@ -1,4 +1,4 @@
-*! gsynth v.2.0.0 Run a forest estimation in R's gsynth package. 20sep2021 by Nick CH-K
+*! gsynth v.2.1.0 Run a generalized synthetic control estimation in R's gsynth package. 09oct2021 by Nick CH-K
 cap prog drop gsynth
 prog def gsynth, eclass
 	

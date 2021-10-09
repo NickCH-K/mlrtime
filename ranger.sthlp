@@ -7,6 +7,7 @@
 {vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
 {vieweralsosee "[R] gsynth" "help gsynth"}{...}
+{vieweralsosee "[R] parsnip" "help parsnip"}{...}
 {viewerjumpto "Description" "examplehelpfile##description"}{...}
 {title:groupsearch}
 

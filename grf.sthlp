@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 2.0.0  20sep2020}{...}
+{* *! version 2.1.0  09oct2020}{...}
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
@@ -9,6 +9,7 @@
 {vieweralsosee "[R] grf_test_calibration" "help grf_test_calibration"}{...}
 {vieweralsosee "[R] grf_variable_importance" "help grf_variable_importance"}{...}
 {vieweralsosee "[R] gsynth" "help gsynth"}{...}
+{vieweralsosee "[R] parsnip" "help parsnip"}{...}
 {viewerjumpto "Syntax" "examplehelpfile##syntax"}{...}
 {viewerjumpto "Description" "examplehelpfile##description"}{...}
 {viewerjumpto "Author" "examplehelpfile##author"}{...}

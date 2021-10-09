@@ -1,4 +1,4 @@
-*! grf v.2.0.0 Run a forest estimation in R's grf package. 20sep2021 by Nick CH-K
+*! grf v.2.1.0 Run a forest estimation in R's grf package. 09oct2021 by Nick CH-K
 cap prog drop grf
 prog def grf
 	
