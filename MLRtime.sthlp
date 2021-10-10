@@ -32,7 +32,9 @@
 {cmd:MLRtime} the {it: command} is really just here so something will pop up when you type {cmd: help MLRtime} after installing it.
 
 {pstd}
-The actual commands of interest are: {help MLRtimesetup} which will set up your machine properly, {help grf} for running honest random forests, including causal forests, {help gsynth} for the generalized synthetic control method, including matrix completion, and {help parsnip} for running a wide range of other machine learning algorithms.
+The actual commands of interest are: {help MLRtimesetup} which will set up your machine properly, {help grf} for running honest random forests, 
+including causal forests, {help gsynth} for the generalized synthetic control method, including matrix completion, 
+and {help parsnip} for running a wide range of other machine learning algorithms.
 
 {pstd}
 Note: If you see a warning when R is running that a package was built on a different version of R, that's okay.
@@ -47,6 +49,7 @@ nhuntington-klein@seattleu.edu
 {marker references}{...}
 {title:References}
 
-{phang} Haghish, E. F. (2019). Seamless interactive language interfacing between R and Stata. The Stata Journal, 19(1), 61–82. {browse "https://doi.org/10.1177/1536867X19830891":Link}.
+{phang} Haghish, E. F. (2019). Seamless interactive language interfacing between R and Stata. The Stata Journal, 19(1), 61–82. 
+{browse "https://doi.org/10.1177/1536867X19830891":Link}.
 
 

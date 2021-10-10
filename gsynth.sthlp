@@ -153,13 +153,17 @@ nhuntington-klein@seattleu.edu
 {marker references}{...}
 {title:References}
 
-{phang} Athey, S., Bayati, M., Doudchenko N., et al. (2017). Matrix completion methods for causal panel data models. arXiv preprint arXiv:1710.10251, 2017.
+{phang} Athey, S., Bayati, M., Doudchenko N., et al. (2017). 
+Matrix completion methods for causal panel data models. arXiv preprint arXiv:1710.10251, 2017.
 
-{phang} Gobillon, L. and Magnac, T. (2016). Regional Policy Evaluation: Interactive Fixed Effects and Synthetic Controls. The Review of Economics and Statistics, 98(3), 535–551.
+{phang} Gobillon, L. and Magnac, T. (2016). Regional Policy Evaluation: Interactive Fixed Effects and Synthetic Controls. 
+The Review of Economics and Statistics, 98(3), 535–551.
 
-{phang} Haghish, E. F. (2019). Seamless interactive language interfacing between R and Stata. The Stata Journal, 19(1), 61–82. {browse "https://doi.org/10.1177/1536867X19830891":Link}.
+{phang} Haghish, E. F. (2019). Seamless interactive language interfacing between R and Stata. The Stata Journal, 19(1), 61–82.
+{browse "https://doi.org/10.1177/1536867X19830891":Link}.
 
-{phang} Xu, Y. (2017). Generalized Synthetic Control Method: Causal Inference with Interactive Fixed Effects Models. Political Analysis, 25 (1), 57-76.
+{phang} Xu, Y. (2017). Generalized Synthetic Control Method: Causal Inference with Interactive Fixed Effects Models. 
+Political Analysis, 25 (1), 57-76.
 
 {marker examples}{...}
 {title:Examples}

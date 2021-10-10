@@ -12,14 +12,16 @@
 {title:groupsearch}
 
 {phang}
-{bf:ranger} {hline 2} A deprecated function for running ranger in R's ranger and returning results
+{bf:ranger} {hline 2} A deprecated function for running ranger in R's ranger and
+ returning results
 
 
 {marker description}{...}
 {title:Description}
 
 {pstd}
-{cmd:ranger} is an old function that is no longer included in the MLRtime package. 
+{cmd:ranger} is an old function that is no longer included in the MLRtime 
+package. 
 Use the {cmd: parsnip} command to access {cmd: ranger} estimates now.
 
 
