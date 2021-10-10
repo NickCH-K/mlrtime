@@ -19,6 +19,7 @@
 {title:Description}
 
 {pstd}
-{cmd:ranger} is an old function that is no longer included in the MLRtime package. Use the {cmd: parsnip} command to access {cmd: ranger} estimates now.
+{cmd:ranger} is an old function that is no longer included in the MLRtime package. 
+Use the {cmd: parsnip} command to access {cmd: ranger} estimates now.
 
 
