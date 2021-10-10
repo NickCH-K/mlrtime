@@ -173,8 +173,7 @@ predictors.{p_end}
 then this acts as a multiplier for smoothness.
 Increase this beyond 1 to produce smoother models.{p_end}
 {synoptline}
-{syntab:model(linear_reg), model(logistic_reg), and model(multinom_reg) 
-Additional Options}
+{syntab:model(linear_reg), model(logistic_reg), and model(multinom_reg) Additional Options}
 {synopt:{opt mode(string)}} Prediction outcome mode.
 Can only be the defaults, which are "regression" for {opt model(linear_reg)} 
 or "classification" for {opt model(logistic_reg)} or 
@@ -441,16 +440,10 @@ artifact of the not-well-thought-out analysis.
 {phang}{cmd:. encode model, g(modeln)}{p_end}
 {phang}{cmd:. g hold = runiform() > .5}{p_end}
 {phang}{cmd:. * I wonder how LASSO predictions compare to random forest!}{p_end}
-{phang}{cmd:. parsnip price mpg headroom trunk i.modeln, model(linear_reg) 
-hold(hold) engine(glmnet) penalty(.5) replace clearR 
-pred(lasso_prediction)}{p_end}
-{phang}{cmd:. parsnip price mpg headroom trunk i.modeln, model(rand_forest) 
-hold(hold) engine(ranger) mode(regression) replace clearR
- pred(RF_prediction)}{p_end}
-{phang}{cmd:. * We could, like in help grf, swap the training and holdout sets
- to get predictions for everyone}{p_end}
-{phang}{cmd:. * but let's just look at which prediction correlates to the truth
- better (among our holdouts)}{p_end}
+{phang}{cmd:. parsnip price mpg headroom trunk i.modeln, model(linear_reg) hold(hold) engine(glmnet) penalty(.5) replace clearR pred(lasso_prediction)}{p_end}
+{phang}{cmd:. parsnip price mpg headroom trunk i.modeln, model(rand_forest) hold(hold) engine(ranger) mode(regression) replace clearR pred(RF_prediction)}{p_end}
+{phang}{cmd:. * We could, like in help grf, swap the training and holdout sets to get predictions for everyone}{p_end}
+{phang}{cmd:. * but let's just look at which prediction correlates to the truth better (among our holdouts)}{p_end}
 {phang}{cmd:. pwcorr price lasso_prediction RF_prediction}{p_end}
 {phang}{cmd:. * Looks like the random forest does better here!}{p_end}
 
