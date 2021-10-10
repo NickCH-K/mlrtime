@@ -129,7 +129,6 @@ artifact of the not-well-thought-out analysis.
 {phang}{cmd:. encode model, g(modeln)}{p_end}
 {phang}{cmd:. g hold = runiform() > .5}{p_end}
 {phang}{cmd:. grf price mpg headroom trunk i.modeln, forest_type(causal_forest) w(foreign) replace clearR pred(estimated_effect) se(SE_effect) hold(hold)}{p_end}
-{phang}{cmd:. }{p_end}
 {phang}{cmd:. grf_ate}{p_end}
 
 
