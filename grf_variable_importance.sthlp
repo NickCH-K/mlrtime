@@ -99,7 +99,6 @@ Note that this syntax example produces estimates of zero importance for all vari
 {phang}{cmd:. * Make dummies ourselves so the names are readable}{p_end}
 {phang}{cmd:. xi i.modeln}{p_end}
 {phang}{cmd:. grf price mpg headroom trunk _I*, forest_type(causal_forest) w(foreign) replace clearR pred(estimated_effect) se(SE_effect) hold(hold)}{p_end}
-{phang}{cmd:. }{p_end}
 {phang}{cmd:. grf_variable_importance}{p_end}
 
 

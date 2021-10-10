@@ -31,9 +31,7 @@
 {syntab:Graph Saving Options}
 {synopt:{opt saving(string)}} Filename to save to.
 Can be .png, .pdf, .gif, .tiff, .bmp, or any 
-{browse 
-"https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html":
-other graphics device}
+{browse "https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/Devices.html":other graphics device}
  supported by R.
 Defaults to "gsynth_plot.png".{p_end}
 {synopt:{opt dim(string)}} Dimensions of the saved image, in terms of 

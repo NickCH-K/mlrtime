@@ -116,7 +116,7 @@ If not specified, the algorithm will use the maximum number of logical cores of
  computer).{p_end}
 {synopt:{opt tol(real 0.001)}} A positive number indicating the tolerance 
 level.{p_end}
-{synopt:{opt min_T0(integer 5}} An integer specifying the minimum value of
+{synopt:{opt min_T0(integer 5)}} An integer specifying the minimum value of
  pre-treatment periods.
 Treated units with pre-treatment periods less than that will be removed
  automatically.

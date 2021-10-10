@@ -19,7 +19,8 @@
 {title:Description}
 
 {pstd}
-{cmd:causal_forest} is an old function that is no longer included in the MLRtime package.
+{cmd:causal_forest} is an old function that is no longer included in the 
+MLRtime package.
 Use the {cmd: grf} command to access {cmd: causal_forest} estimates now.
 
 

@@ -38,10 +38,9 @@ cloud.{p_end}
 
 {pstd}
 {cmd:MLRtimesetup} will install the Stata packages {cmd: github} and 
-{cmd: rcall} referenced in {browse 
-"https://journals.sagepub.com/doi/abs/10.1177/1536867X19830891?journalCode=stja"
-:Haghish (2019)}, as well as every R package necessary to run every function in 
-MLRtime.
+{cmd: rcall} referenced in 
+{browse "https://journals.sagepub.com/doi/abs/10.1177/1536867X19830891?journalCode=stja":Haghish (2019)},
+ as well as every R package necessary to run every function in MLRtime.
 The Stata packages will be downloaded from GitHub and not ssc.
 
 {pstd}
@@ -49,8 +48,9 @@ R must be installed first before running {cmd:MLRtimesetup}, and R must be
 callable from the command line.
 You can install R at {browse "https://www.r-project.org/":R-Project.org}.
 If after installing R, {cmd: rcall} is still having trouble finding your R 
-installation, see the {browse "http://www.haghish.com/packages/Rcall.php":rcall 
-website} for troubleshooting tips.
+installation, see the 
+{browse "http://www.haghish.com/packages/Rcall.php":rcall website} 
+for troubleshooting tips.
 Likely, your R installation is just not where it expects.
 
 {pstd}
