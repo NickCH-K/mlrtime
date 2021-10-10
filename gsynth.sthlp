@@ -45,7 +45,7 @@
 {synopt:{opt cl(varname)}} The cluster variable. If not specified, bootstrap will be blocked at unit level (only for non-parametric bootstrap).{p_end}
 {synopt:{opt r(integer 0)}} The number of factors. If {opt cv} is specified, the cross validation procedure will select the optimal number of factors from r to 5.{p_end}
 {synopt:{opt lambda(string)}} A single or sequence of positive numbers (i.e. {opt lambda(.1 .2 .3)}; sequences like {opt lambda(.1(.1).3)} are not supported) specifying the hyper-parameter sequence for matrix completion method. If lambda is a sequence and {opt cv} is specified, cross-validation will be performed.{p_end}
-{synopt:{opt nlambda(integer 10}} The length of hyper-parameter sequence for matrix completion method.{p_end}
+{synopt:{opt nlambda(integer 10)}} The length of hyper-parameter sequence for matrix completion method.{p_end}
 {synopt:{opt no_cv}} Don't perform cross-validation to select the optimal number of factors or hyper-parameter in matrix completion algorithm. If {opt r} is not specified, the procedure will search through r = 0 to 5.{p_end}
 {synopt:{opt criterion(string)}} The criteria used for determining the number of factors. Choose from "mspe" or "pc". "mspe" stands for the mean squared prediction error obtained through the loocv procedure, and "pc" stands for a kind of information criterion. If {opt criterion(pc)}, the number of factors that minimize "pc" will be selected. Default is {opt criterion(mspe)}.{p_end}
 {synopt:{opt k(integer 5)}} Cross-validation times for the matrix completion algorithm.{p_end}

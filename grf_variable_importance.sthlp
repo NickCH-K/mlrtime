@@ -18,7 +18,7 @@
 {title:Generalized Random Forest Functions}
 
 {phang}
-{bf:grf_variable importance} {hline 2} Get an "importance value" of each predictor in a forest from R's grf
+{bf:grf_variable_importance} {hline 2} Get an "importance value" of each predictor in a forest from R's grf
 
 
 {marker syntax}{...}

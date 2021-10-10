@@ -14,7 +14,7 @@
 {title:MLRtimesetup}
 
 {phang}
-{bf:MLRtimesetupz} {hline 2} set up rcall and R package dependencies
+{bf:MLRtimesetup} {hline 2} set up rcall and R package dependencies
 
 
 {marker syntax}{...}
