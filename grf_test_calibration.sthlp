@@ -31,7 +31,10 @@
 {synopthdr}
 {synoptline}
 {syntab:Main}
-{synopt:{opt vcov_type(string)}} Optional covariance type for standard errors. The possible options are HC0, ..., HC3. The default is "HC3", which is recommended in small samples and corresponds to the "shortcut formula" for the jackknife (see MacKinnon & White for more discussion, and Cameron & Miller for a review). For large data sets with clusters, "HC0" or "HC1" are significantly faster to compute.{p_end}
+{synopt:{opt vcov_type(string)}} Optional covariance type for standard errors.
+The possible options are HC0, ..., HC3.
+The default is "HC3", which is recommended in small samples and corresponds to the "shortcut formula" for the jackknife (see MacKinnon & White for more discussion, and Cameron & Miller for a review).
+For large data sets with clusters, "HC0" or "HC1" are significantly faster to compute.{p_end}
 {synoptline}
 {p2colreset}{...}
 
@@ -45,16 +48,23 @@
 {cmd:grf_test_calibration} is an interface between Stata and the "test_calibration" function in the R package {cmd: grf}, by Athey, Tibshirani, and Wager (2019).
 
 {pstd}
-This is a postestimation function for {cmd:grf}, and can be used with any of the forests. See {cmd: rcall: help(test_calibration, package = 'grf')} or {browse "https://grf-labs.github.io/grf/"} for more information.
+This is a postestimation function for {cmd:grf}, and can be used with any of the forests.
+See {cmd: rcall: help(test_calibration, package = 'grf')} or {browse "https://grf-labs.github.io/grf/"} for more information.
 
 {pstd}
-This function tests the calibration of the forest. Computes the best linear fit of the target estimand using the forest prediction (on held-out data) as well as the mean forest prediction as the sole two regressors. A coefficient of 1 for 'mean.forest.prediction' suggests that the mean forest prediction is correct, whereas a coefficient of 1 for 'differential.forest.prediction' additionally suggests that the forest has captured heterogeneity in the underlying signal. The p-value of the 'differential.forest.prediction' coefficient also acts as an omnibus test for the presence of heterogeneity: If the coefficient is significantly greater than 0, then we can reject the null of no heterogeneity.
+This function tests the calibration of the forest.
+Computes the best linear fit of the target estimand using the forest prediction (on held-out data) as well as the mean forest prediction as the sole two regressors.
+A coefficient of 1 for 'mean.forest.prediction' suggests that the mean forest prediction is correct, whereas a coefficient of 1 for 'differential.forest.prediction' additionally suggests that the forest has captured heterogeneity in the underlying signal.
+The p-value of the 'differential.forest.prediction' coefficient also acts as an omnibus test for the presence of heterogeneity: If the coefficient is significantly greater than 0, then we can reject the null of no heterogeneity.
 
 {pstd}
-Unfortunately, troubleshooting your model if it does not work is rather difficult when using a wrapper like this. You can get some help on the GitHub page at {browse "https://github.com/NickCH-K/MLRtime"} but I can't help everyone, you may be a bit on your own. You may be able to use {cmd: rcall} to see what error messages come up if things are not being returned to Stata.
+Unfortunately, troubleshooting your model if it does not work is rather difficult when using a wrapper like this.
+You can get some help on the GitHub page at {browse "https://github.com/NickCH-K/MLRtime"} but I can't help everyone, you may be a bit on your own.
+You may be able to use {cmd: rcall} to see what error messages come up if things are not being returned to Stata.
 
 {pstd}
-The use of any MLRtime function will often result in flashing blue screens. If you are photosensitive you may want to look away.
+The use of any MLRtime function will often result in flashing blue screens.
+If you are photosensitive you may want to look away.
 
 {marker author}{...}
 {title:Author}

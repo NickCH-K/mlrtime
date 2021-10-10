@@ -36,16 +36,22 @@
 {title:Description}
 
 {pstd}
-{cmd:MLRtimesetup} will install the Stata packages {cmd: github} and {cmd: rcall} referenced in {browse "https://journals.sagepub.com/doi/abs/10.1177/1536867X19830891?journalCode=stja":Haghish (2019)}, as well as every R package necessary to run every function in MLRtime. The Stata packages will be downloaded from GitHub and not ssc.
+{cmd:MLRtimesetup} will install the Stata packages {cmd: github} and {cmd: rcall} referenced in {browse "https://journals.sagepub.com/doi/abs/10.1177/1536867X19830891?journalCode=stja":Haghish (2019)}, as well as every R package necessary to run every function in MLRtime.
+The Stata packages will be downloaded from GitHub and not ssc.
 
 {pstd}
-R must be installed first before running {cmd:MLRtimesetup}, and R must be callable from the command line. You can install R at {browse "https://www.r-project.org/":R-Project.org}. If after installing R, {cmd: rcall} is still having trouble finding your R installation, see the {browse "http://www.haghish.com/packages/Rcall.php":rcall website} for troubleshooting tips. Likely, your R installation is just not where it expects.
+R must be installed first before running {cmd:MLRtimesetup}, and R must be callable from the command line.
+You can install R at {browse "https://www.r-project.org/":R-Project.org}.
+If after installing R, {cmd: rcall} is still having trouble finding your R installation, see the {browse "http://www.haghish.com/packages/Rcall.php":rcall website} for troubleshooting tips.
+Likely, your R installation is just not where it expects.
 
 {pstd}
-The use of any MLRtime function will often result in flashing blue screens. If you are photosensitive you may want to look away.
+The use of any MLRtime function will often result in flashing blue screens.
+If you are photosensitive you may want to look away.
 
 {pstd}
-If {cmd:rcall} seems to be working fine, but R package installation is giving you problems, then open up R and copy/paste the following commands one at a time. If one fails, check the error message to see if it's something you can fix (sometimes you need to delete the "00LOCK" folder that shows up in your subdirectory of R packages), or maybe just try it again before moving on to the next:
+If {cmd:rcall} seems to be working fine, but R package installation is giving you problems, then open up R and copy/paste the following commands one at a time.
+If one fails, check the error message to see if it's something you can fix (sometimes you need to delete the "00LOCK" folder that shows up in your subdirectory of R packages), or maybe just try it again before moving on to the next:
 
 {pstd} install.packages("broom", repos = "https://cloud.r-project.org", dependencies = TRUE)
 

@@ -35,7 +35,8 @@
 The actual commands of interest are: {help MLRtimesetup} which will set up your machine properly, {help grf} for running honest random forests, including causal forests, {help gsynth} for the generalized synthetic control method, including matrix completion, and {help parsnip} for running a wide range of other machine learning algorithms.
 
 {pstd}
-Note: If you see a warning when R is running that a package was built on a different version of R, that's okay. It's probably not an issue, and you can make it go away by updating your R installation.
+Note: If you see a warning when R is running that a package was built on a different version of R, that's okay.
+It's probably not an issue, and you can make it go away by updating your R installation.
 
 {marker author}{...}
 {title:Author}
