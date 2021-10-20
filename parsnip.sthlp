@@ -47,9 +47,10 @@ So if, for example, you have a factor variable where one of the levels is absent
 {synopt:{opt model}} Required.
 The type of model to fit.
 See details below for how to check for documentation these models.
-Currently supports: {it: boost_tree, gen_additive_mod, linear_reg, logistic_reg,
- mars, mlp, multinom_reg, nearest_neighbor, rand_forest, svm_linear, svm_poly, 
- svm_rbf}.{p_end}
+Currently supports: {it: boost_tree}, {it: gen_additive_mod}, {it: linear_reg}, 
+{it: logistic_reg}, {it: mars}, {it: mlp}, {it: multinom_reg}, 
+{it: nearest_neighbor}, {it: rand_forest}, {it: svm_linear}, {it: svm_poly}, 
+ {it: svm_rbf}.{p_end}
 {synoptline}
 {syntab:Main Options}
 {synopt:{opt clearR}} Start a new R environment before running your 
