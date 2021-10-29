@@ -1,6 +1,6 @@
-*! MLRtimesetup v.2.1.0 Set up MLRtime and all its dependencies. 09oct2021 by Nick CH-K
-cap prog drop MLRtimesetup
-prog def MLRtimesetup
+*! mlrtimesetup v.2.1.0 Set up mlrtime and all its dependencies. 09oct2021 by Nick CH-K
+cap prog drop mlrtimesetup
+prog def mlrtimesetup
 
 	syntax [anything], [go]
 
@@ -11,10 +11,10 @@ prog def MLRtimesetup
 		display "necessary to use R in Stata."
 		display "These are both installed from GitHub"
 		local url1 = `""https://journals.sagepub.com/doi/10.1177/1536867X19830891""'
-		display "and are not maintained by StataCorp or the MLRtime authors."
+		display "and are not maintained by StataCorp or the mlrtime authors."
 		display "For more information on github and rcall, see {browse " `"`url1'"' ":the Stata Journal publication by Haghish}."
 		display ""
-		display "This will also install all of the R packages that MLRtime can use."
+		display "This will also install all of the R packages that mlrtime can use."
 		display ""
 		display "Finally, this setup requires that R is ALREADY installed on your machine."
 		local urlR = `""https://www.r-project.org/""'
@@ -84,6 +84,6 @@ prog def MLRtimesetup
 	}
 	
 	display "You're good to go! Everything is installed."
-	display "You may want to rerun MLRtimesetup regularly to get updated versions of packages."
+	display "You may want to rerun mlrtimesetup regularly to get updated versions of packages."
 	
 end

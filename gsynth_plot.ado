@@ -15,7 +15,7 @@ prog def gsynth_plot
 	* This check nicked from Jonathan Roth's staggered package
 	capture findfile rcall.ado
 	if _rc != 0 {
-	 display as error "rcall package must be installed. Run MLRtimesetup."
+	 display as error "rcall package must be installed. Run mlrtimesetup."
 	 error 198
 	}
 	
@@ -24,7 +24,7 @@ prog def gsynth_plot
 	
 	capture rcall: library(gsynth)
 	if _rc != 0{
-		display as error "Package (gsynth) is missing. Run MLRtimesetup."
+		display as error "Package (gsynth) is missing. Run mlrtimesetup."
 		exit
 	} 
 	

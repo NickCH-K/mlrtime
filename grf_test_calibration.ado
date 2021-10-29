@@ -9,7 +9,7 @@ prog def grf_test_calibration, eclass
 	* This check nicked from Jonathan Roth's staggered package
 	capture findfile rcall.ado
 	if _rc != 0 {
-	 display as error "rcall package must be installed. Run MLRtimesetup."
+	 display as error "rcall package must be installed. Run mlrtimesetup."
 	 error 198
 	}
 	
@@ -18,7 +18,7 @@ prog def grf_test_calibration, eclass
 	
 	capture rcall: library(grf)
 	if _rc != 0{
-		display as error "Package (grf) is missing. Run MLRtimesetup."
+		display as error "Package (grf) is missing. Run mlrtimesetup."
 		exit
 	} 
 	

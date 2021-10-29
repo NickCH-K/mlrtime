@@ -3,6 +3,6 @@ d Materials by N. Huntington-Klein
 d nhuntington-klein@seattleu.edu
 d http://nickchk.com
 
-d 'MLRtime': Access ML commands in R using Stata
+d 'mlrtime': Access ML commands in R using Stata
 
-p MLRtime
+p mlrtime

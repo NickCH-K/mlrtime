@@ -3,8 +3,8 @@
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
-{vieweralsosee "[R] MLRtime" "help MLRtime"}{...}
-{vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
+{vieweralsosee "[R] mlrtime" "help mlrtime"}{...}
+{vieweralsosee "[R] mlrtimesetup" "help mlrtimesetup"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
 {vieweralsosee "[R] grf_ate" "help grf_ate"}{...}
 {vieweralsosee "[R] grf_test_calibration" "help grf_test_calibration"}{...}
@@ -69,7 +69,7 @@ you may be a bit on your own.
 You may be able to use {cmd: rcall} to see what error messages come up if things are not being returned to Stata.
 
 {pstd}
-The use of any MLRtime function will often result in flashing blue screens.
+The use of any mlrtime function will often result in flashing blue screens.
 If you are photosensitive you may want to look away.
 
 {marker author}{...}

@@ -24,7 +24,7 @@ prog def parsnip
 	* This check nicked from Jonathan Roth's staggered package
 	capture findfile rcall.ado
 	if _rc != 0 {
-	 display as error "rcall package must be installed. Run MLRtimesetup."
+	 display as error "rcall package must be installed. Run mlrtimesetup."
 	 error 198
 	}
 	
@@ -37,7 +37,7 @@ prog def parsnip
 	
 	capture rcall: library(parsnip)
 	if _rc != 0{
-		display as error "Package (parsnip) is missing. Run MLRtimesetup."
+		display as error "Package (parsnip) is missing. Run mlrtimesetup."
 		exit
 	} 
 	

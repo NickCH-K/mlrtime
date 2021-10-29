@@ -3,7 +3,7 @@
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
-{vieweralsosee "[R] MLRtime" "help MLRtime"}{...}
+{vieweralsosee "[R] mlrtime" "help mlrtime"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
 {vieweralsosee "[R] gsynth" "help gsynth"}{...}
 {vieweralsosee "[R] parsnip" "help parsnip"}{...}
@@ -11,17 +11,17 @@
 {viewerjumpto "Description" "examplehelpfile##description"}{...}
 {viewerjumpto "Author" "examplehelpfile##author"}{...}
 {viewerjumpto "References" "examplehelpfile##references"}{...}
-{title:MLRtimesetup}
+{title:mlrtimesetup}
 
 {phang}
-{bf:MLRtimesetup} {hline 2} set up rcall and R package dependencies
+{bf:mlrtimesetup} {hline 2} set up rcall and R package dependencies
 
 
 {marker syntax}{...}
 {title:Syntax}
 
 {p 8 17 2}
-{cmd:MLRtimesetup} [repo], [go]
+{cmd:mlrtimesetup} [repo], [go]
 
 {synoptset 20 tabbed}{...}
 {synopthdr}
@@ -37,14 +37,14 @@ cloud.{p_end}
 {title:Description}
 
 {pstd}
-{cmd:MLRtimesetup} will install the Stata packages {cmd: github} and 
+{cmd:mlrtimesetup} will install the Stata packages {cmd: github} and 
 {cmd: rcall} referenced in 
 {browse "https://journals.sagepub.com/doi/abs/10.1177/1536867X19830891?journalCode=stja":Haghish (2019)},
- as well as every R package necessary to run every function in MLRtime.
+ as well as every R package necessary to run every function in mlrtime.
 The Stata packages will be downloaded from GitHub and not ssc.
 
 {pstd}
-R must be installed first before running {cmd:MLRtimesetup}, and R must be 
+R must be installed first before running {cmd:mlrtimesetup}, and R must be 
 callable from the command line.
 You can install R at {browse "https://www.r-project.org/":R-Project.org}.
 If after installing R, {cmd: rcall} is still having trouble finding your R 
@@ -54,7 +54,7 @@ for troubleshooting tips.
 Likely, your R installation is just not where it expects.
 
 {pstd}
-The use of any MLRtime function will often result in flashing blue screens.
+The use of any mlrtime function will often result in flashing blue screens.
 If you are photosensitive you may want to look away.
 
 {pstd}

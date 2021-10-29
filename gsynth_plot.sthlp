@@ -3,8 +3,8 @@
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
-{vieweralsosee "[R] MLRtime" "help MLRtime"}{...}
-{vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
+{vieweralsosee "[R] mlrtime" "help mlrtime"}{...}
+{vieweralsosee "[R] mlrtimesetup" "help mlrtimesetup"}{...}
 {vieweralsosee "[R] gsynth" "help gsynth"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
 {vieweralsosee "[R] parsnip" "help parsnip"}{...}
@@ -122,7 +122,7 @@ See {browse "https://yiqingxu.org/packages/gsynth/gsynth_examples.html"} for
 {cmd: rcall: help(plot.gsynth, package = 'gsynth')} for further documentation.
 
 {pstd}
-The use of any MLRtime function will often result in flashing blue screens.
+The use of any mlrtime function will often result in flashing blue screens.
 If you are photosensitive you may want to look away.
 
 {marker author}{...}

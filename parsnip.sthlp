@@ -3,8 +3,8 @@
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
-{vieweralsosee "[R] MLRtime" "help MLRtime"}{...}
-{vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
+{vieweralsosee "[R] mlrtime" "help mlrtime"}{...}
+{vieweralsosee "[R] mlrtimesetup" "help mlrtimesetup"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
 {vieweralsosee "[R] gsynth" "help gsynth"}{...}
 {viewerjumpto "Syntax" "examplehelpfile##syntax"}{...}
@@ -135,7 +135,7 @@ Prediction outcome mode.
 Options "regression" or "classification".{p_end}
 {synopt:{opt engine(string)}} Can be "xgboost" (default) or "C5.0".
 {opt engine(C5.0)} only works with {opt mode(classification)}.
-"spark" is not supported in {cmd: MLRtime}.{p_end}
+"spark" is not supported in {cmd: mlrtime}.{p_end}
 {synopt:{opt mtry(real)}} A number for the number (or proportion) of predictors 
 that will be randomly sampled at each split when creating the tree models 
 (specific engines only).{p_end}
@@ -185,7 +185,7 @@ or "classification" for {opt model(logistic_reg)} or
 {opt model(logistic_reg)} can also be "LiblineaR" or its default "glm".
 {opt model(multinom_reg)} can also be its default "nnet" (does not allow 
 {opt results(replace)}).
-"spark" is not supported in {cmd: MLRtime}.{p_end}
+"spark" is not supported in {cmd: mlrtime}.{p_end}
 {synopt:{opt penalty(real)}} Required if {opt engine(glmnet)} is specified.
 A non-negative number representing the total amount of regularization (specific 
 engines only).
@@ -252,7 +252,7 @@ distance.{p_end}
 Prediction outcome mode.
 Options "regression" or "classification".{p_end}
 {synopt:{opt engine(string)}} Can be the default "ranger", or "randomForest".
-"spark" is not supported in {cmd: MLRtime}.{p_end}
+"spark" is not supported in {cmd: mlrtime}.{p_end}
 {synopt:{opt mtry(integer)}} The number of predictors that will be randomly 
 sampled at each split when creating the tree models.{p_end}
 {synopt:{opt trees(integer)}} The number of trees contained in the 
@@ -350,7 +350,7 @@ If you do not have TensorFlow installed where R can find it, you can try
 {cmd: rcall: tensorflow::install_tensorflow()}, although this process may be
  finicky.
 Yes, this means that if {opt engine(keras)} is specified, the Stata package
- {cmd: MLRtime} contains the function {cmd:parsnip} which calls the Stata
+ {cmd: mlrtime} contains the function {cmd:parsnip} which calls the Stata
  {cmd: rcall} package, which calls the R package {cmd: parsnip}, which calls
  the R package {cmd: keras}, which calls the R package {cmd: tensorflow}, which
  calls the platform TensorFlow, which itself is written in (and calls on 
@@ -361,7 +361,7 @@ Welcome to computing in the 2020s.
 Unfortunately, troubleshooting your model if it does not work is rather 
 difficult when using a wrapper like this.
 You can get some help on the GitHub page at 
-{browse "https://github.com/NickCH-K/MLRtime"} but I can't help everyone, you
+{browse "https://github.com/NickCH-K/mlrtime"} but I can't help everyone, you
  may be a bit on your own.
 You may be able to use {cmd: rcall} to see what error messages come up if things
  are not being returned to Stata, or try putting {cmd: set trace on} before
@@ -397,7 +397,7 @@ The {opt precedes} option allows the insertion of R code after data is imported
  afterwards, referring to the fitted model object as {cmd: M}.
 The relevant objects will remain in the R session and can be accessed and 
 manipulated further with R code using {help rcall} afterwards (Haghish 2019).
-Run {help MLRtimesetup} before use for the first time.
+Run {help mlrtimesetup} before use for the first time.
 
 
 {pstd}
@@ -410,7 +410,7 @@ In this case you should create factor and time-series variables by hand and
  store them directly in the data.
 
 {pstd}
-The use of any MLRtime function will often result in flashing blue screens.
+The use of any mlrtime function will often result in flashing blue screens.
 If you are photosensitive you may want to look away.
 
 {marker author}{...}

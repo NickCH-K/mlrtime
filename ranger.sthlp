@@ -3,8 +3,8 @@
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
-{vieweralsosee "[R] MLRtime" "help MLRtime"}{...}
-{vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
+{vieweralsosee "[R] mlrtime" "help mlrtime"}{...}
+{vieweralsosee "[R] mlrtimesetup" "help mlrtimesetup"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
 {vieweralsosee "[R] gsynth" "help gsynth"}{...}
 {vieweralsosee "[R] parsnip" "help parsnip"}{...}
@@ -20,7 +20,7 @@
 {title:Description}
 
 {pstd}
-{cmd:ranger} is an old function that is no longer included in the MLRtime 
+{cmd:ranger} is an old function that is no longer included in the mlrtime 
 package. 
 Use the {cmd: parsnip} command to access {cmd: ranger} estimates now.
 

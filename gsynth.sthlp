@@ -3,8 +3,8 @@
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
-{vieweralsosee "[R] MLRtime" "help MLRtime"}{...}
-{vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
+{vieweralsosee "[R] mlrtime" "help mlrtime"}{...}
+{vieweralsosee "[R] mlrtimesetup" "help mlrtimesetup"}{...}
 {vieweralsosee "[R] gsynth_plot" "help gsynth_plot"}{...}
 {vieweralsosee "[R] grf" "help grf"}{...}
 {vieweralsosee "[R] parsnip" "help parsnip"}{...}
@@ -52,7 +52,7 @@ These functions can refer to variables in your data as part of the data set
 {cmd: dataset@@varname}.
 Use "@@" instead of "$" where $ appears in the R code to avoid confusing Stata.
 As of this writing, all options should be supported, but this may come in handy
- if gsynth updates but MLRtime hasn't caught up yet.{p_end}
+ if gsynth updates but mlrtime hasn't caught up yet.{p_end}
 {synopt:{opt att_file_replace(string)}} Save the by-period average treatment on
  the treated estimates to a Stata dataset in addition to returning it as a
  matrix.{p_end}
@@ -198,7 +198,7 @@ The {opt precedes} option allows the insertion of R code after data is imported
  afterwards, referring to the estimated model object as {cmd: M}.
 The relevant objects will remain in the R session and can be accessed and
  manipulated further with R code using {help rcall} afterwards (Haghish 2019).
-Run {help MLRtimesetup} before use for the first time. 
+Run {help mlrtimesetup} before use for the first time. 
 
 {pstd}
 Additional note: while {help depvar}, {opt treatvar}, and {help varlist} accept
@@ -209,7 +209,7 @@ If you plan to use this matrix you should create and name variables ahead of
  time.
 
 {pstd}
-The use of any MLRtime function will often result in flashing blue screens.
+The use of any mlrtime function will often result in flashing blue screens.
 If you are photosensitive you may want to look away.
 
 {marker author}{...}

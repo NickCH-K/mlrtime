@@ -3,8 +3,8 @@
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
-{vieweralsosee "[R] MLRtime" "help MLRtime"}{...}
-{vieweralsosee "[R] MLRtimesetup" "help MLRtimesetup"}{...}
+{vieweralsosee "[R] mlrtime" "help mlrtime"}{...}
+{vieweralsosee "[R] mlrtimesetup" "help mlrtimesetup"}{...}
 {vieweralsosee "[R] grf_ate" "help grf_ate"}{...}
 {vieweralsosee "[R] grf_test_calibration" "help grf_test_calibration"}{...}
 {vieweralsosee "[R] grf_variable_importance" "help grf_variable_importance"}{...}
@@ -99,7 +99,7 @@ You can refer to other variables in your data as part of the overall data set
  holding and training subsets.
 Use "@@" instead of "$" where $ appears in the R code to avoid confusing Stata.
 As of this writing, all options should be supported, but this may come in handy
- if the grf package updates and MLRtime hasn't caught up yet.{p_end}
+ if the grf package updates and mlrtime hasn't caught up yet.{p_end}
 {synopt:{opt precedes(string)}} A List of R commands, separated by semicolons
  ({cmd: ;}), of whatever you'd like R to do after importing your data but before
  running your {cmd: grf} command.
@@ -361,7 +361,7 @@ The {opt precedes} option allows the insertion of R code after data is imported
  afterwards, referring to the estimated model object as {cmd: M}.
 The relevant objects will remain in the R session and can be accessed and
  manipulated further with R code using {help rcall} afterwards (Haghish 2019).
-Run {help MLRtimesetup} before use for the first time.
+Run {help mlrtimesetup} before use for the first time.
 It is also strongly recommended that you read 
 {cmd: rcall: help(causal_forest, package = 'grf')} (or similarly for other 
 {it:forest_type} options) to understand the options syntax and how to use the 
@@ -378,7 +378,7 @@ In this case you should create factor and time-series variables by hand and
  store them directly in the data.
 
 {pstd}
-The use of any MLRtime function will often result in flashing blue screens.
+The use of any mlrtime function will often result in flashing blue screens.
 If you are photosensitive you may want to look away.
 
 {marker author}{...}
