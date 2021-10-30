@@ -174,8 +174,8 @@ Default is 2.{p_end}
 By default, the number of threads is set to the maximum hardware
  concurrency.{p_end}
 {synoptline}
-{syntab:Cross-Validation Parameters (for causal_forest, instrumental_forest,
- ll_regression_forest, regression_forest)}
+{syntab:Cross-Validation Parameters (for causal, instrumental,
+ ll_regression, regression forests)}
 {synopt:{opt tune_parameters(string)}} A list of parameter names to tune,
  separated by spaces.
 If {opt all}: all tunable parameters are tuned by cross-validation.
